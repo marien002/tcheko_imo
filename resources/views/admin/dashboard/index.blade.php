@@ -168,16 +168,29 @@
                             <td class="text-danger fw-bold">{{ $resultat['nombreLibres'] }}</td>
                             <td>
                                 <ul class="list-unstyled m-0">
-                                    @foreach($resultat['detailsOccupes'] as $occupe)
-                                        <li>✅ {{ $occupe->bien_nom }}</li>
-                                    @endforeach
+                                  @forelse ( $resultat['biensOccupes'] as $occupe )
+                                  <li>✅ {{ $occupe->bien_nom }}</li>
+                                  @empty
+                                  <li>Aucun bien disponible</li>
+                           
+                                  @endforelse
+
+                                 
+
                                 </ul>
                             </td>
                             <td>
                                 <ul class="list-unstyled m-0">
-                                    @foreach($resultat['detailsLibres'] as $libre)
+
+                                
+                                    @forelse ($resultat['biensLibres'] as $libre)
                                         <li>❌ {{ $libre->bien_nom }}</li>
-                                    @endforeach
+                                    @empty
+                                        <li>Aucun bien disponible</li>
+                                    @endforelse
+                                </ul>
+                                
+
                                 </ul>
                             </td>
                         </tr>
