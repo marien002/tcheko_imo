@@ -86,10 +86,18 @@
                                 <input type="number" name="loyer" required id="inputPassword6" class="form-control " 
                                 aria-describedby="passwordHelpInline" placeholder="Montant du loyer">
                             </div>
-    
-                
+
                         </div>
                         <div class="row mt-3">
+                            <div class="col">
+                                <div class="col d-flex justify-content-center align-items-center">
+                                    <input type="date" name="date_debut" required id="inputDate" class="form-control " 
+                                    aria-describedby="passwordHelpInline" placeholder="Entrer le date du debut">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row  mt-3">
                             <button type="submit" class="btn btn-primary">Valider le contrat</button>
                         </div>
                 </div>
@@ -110,6 +118,18 @@
       </section>
 
 </form>
+<script>
+    // Fonction pour initialiser le champ de date avec la date du jour
+    document.addEventListener("DOMContentLoaded", function() {
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0'); // Mois de 0 à 11
+        const dd = String(today.getDate()).padStart(2, '0');
+        
+        const currentDate = `${yyyy}-${mm}-${dd}`;
+        document.getElementById("inputDate").value = currentDate;
+    });
+</script>
  
 @endsection
 

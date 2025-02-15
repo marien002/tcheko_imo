@@ -52,13 +52,11 @@ class operationController extends Controller
             "montant"=>$request->input("montant"),
             "status"=>0,
             "status2"=>0,
-
             "date"=>date('Y-m-d')]);
 
         }else{
             operation::create(["id_propriete"=>$request->input("contenue"),
             "type"=>$request->input("type_propriete"),
-    
             "modif"=>$request->input("motif"),
             "montant"=>$request->input("montant"),
             "status"=>0,

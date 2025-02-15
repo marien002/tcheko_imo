@@ -141,7 +141,6 @@
 <script>
   function changeFormat(dateInput) {
    
-         
                 // Découper la chaîne en année et mois
                 const [year, month] = dateInput.split('-');
 
@@ -252,7 +251,7 @@
                 var a="{{ route('loyer.completerLoyer', ['id_propriete' => ':id_propriete', 'id_bien' => ':id_bien', 'mois' => ':mois']) }}"
             .replace(':id_propriete', item.id).replace(':id_bien', type).replace(':mois', dates)
 
-                status=`<span class="badge text-bg-warning ">Une partie</span>
+                status=`<span class="badge text-bg-warning ">Avance</span>
                 
                <a href="${a}">   <span class="badge text-bg-danger ">Completez</span></a> 
                 

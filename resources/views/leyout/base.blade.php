@@ -201,7 +201,7 @@
      
 
       <li class="nav-item mt-3">
-        <a class="nav-link collapsed" href="{{ route('propriete.create') }}">
+        <a class="nav-link collapsed" href="{{ route('propriete.index') }}">
           <i class="bi bi-buildings"></i>
           <span>Propriétés</span>
         </a>

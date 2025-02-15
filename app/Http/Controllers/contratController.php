@@ -66,9 +66,10 @@ class contratController extends Controller
     public function save(Request $request){
 
         if($request->input("type")=="1"){
+         
 
             location_ap::create([
-                'date_debut'=>date('Y-m-d'),
+                'date_debut'=>$request->input("date_debut"),
                 'garantie'=>$request->input("garantie"),
                 'loyer'=>$request->input("loyer"),
                 'id_appartement'=>$request->input("numnom"),
@@ -100,7 +101,7 @@ class contratController extends Controller
             
 
             location_autre::create([
-                'date_debut'=>date('Y-m-d'),
+                'date_debut'=>$request->input("date_debut"),
                 'garantie'=>$request->input("garantie"),
                 'loyer'=>$request->input("loyer"),
                 'id_autre_bien'=>$request->input("numnom"),

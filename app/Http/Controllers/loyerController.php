@@ -34,13 +34,13 @@ class loyerController extends Controller
                         $status=-1;
                         $montant=$request->input("montant_loyer");
                     }
-
+                    
                 }
 
                 loyer_app::create(['montant'=> $montant,
                 'id_locataire'=>$request->input("id_locataire"),
                 'id_appartement'=>$request->input("id_numNom"),
-                'statut'=>$status,'date'=>date('Y-m-d')]);
+                'statut'=>$status,'date'=>$request->input('date_jour')]);
 
             }else{
              
@@ -57,7 +57,7 @@ class loyerController extends Controller
                 loyer_app::create(['montant'=> $request->input("loyer"),
                 'id_locataire'=>$request->input("id_locataire"),
                 'id_appartement'=>$request->input("id_numNom"),
-                'statut'=>1,'date'=>date('Y-m-d')]);
+                'statut'=>1,'date'=>$request->input('date_jour')]);
 
 
 

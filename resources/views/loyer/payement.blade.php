@@ -66,11 +66,11 @@
                             </div>
                             <div class="row mt-3">
                                 <div class="col">
-                                    <input type="date" value="{{$valeurs[0]->date}}" class="form-control">
+                                    <input type="date" name="date_jour" value="{{$valeurs[0]->date}}" class="form-control">
                                 </div>
                             </div>
 
-                            @if (is_null($valeurs[0]->date))
+                           
                             <div class="row mt-3">
                                 <div class="col">
                                     <button type="submit" class="btn btn-primary">Valider le paiment</button>
@@ -114,13 +114,10 @@
                                 </div>
             
                             </div>
-                                
-                            @else
+                        
 
                                 <p style="color: red;" class="mt-3">pour ce mois rien à signaler </p>
-                                
-                            @endif
-        
+                  
                         
 
                         </div>

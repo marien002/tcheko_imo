@@ -27,18 +27,16 @@
                     <div class="row">
 
                         <div class="col d-flex justify-content-center align-items-center">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Type de biens</option>
+                            <select class="form-select" id="type" aria-label="Default select example">
+                                <option >Type de biens</option>
                                 <option value="1">Immeuble</option>
                                 <option value="2">Galerie</option>
                             </select>
                         </div>
 
                         <div class="col d-flex justify-content-center align-items-center">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Nom du bien</option>
-                                <option value="1">Tchiko House</option>
-                                <option value="2">Tchiko Shop</option>
+                            <select class="form-select" id="nom_type" aria-label="Default select example">
+                           
                             </select>
                         </div>
 
@@ -74,6 +72,7 @@
                       <th scope="col">Numero apparts</th>
                       <th scope="col">Statut </th>
                       <th scope="col">Occupant</th>
+                      <th scope="col">Operation</th>
                     
                     </tr>
                   </thead>

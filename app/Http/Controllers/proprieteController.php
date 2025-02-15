@@ -14,10 +14,19 @@ use Illuminate\Support\Facades\Session;
 
 
 class proprieteController extends Controller
+
 {
     public function create(){
 
         return View("propriete.create");
+
+    }
+    public function index (){
+
+
+
+        return view('propriete.index');
+
 
     }
     
@@ -75,6 +84,7 @@ class proprieteController extends Controller
                             'nom' => $type . ($j + 1),
                             'loyer' => 0,
                             'garantie' => 0,
+                            'status' => "0",
                             'type' => $type,
                             'id_galerie' => $galerie->id,
                         ]);
@@ -90,9 +100,7 @@ class proprieteController extends Controller
 
 
 
-    public function index(){
-
-    }
+    
 
     public function show($id){
        
@@ -174,6 +182,9 @@ class proprieteController extends Controller
            
         }
 
+    }
+
+    public function show_detaille_all(){
 
     }
 

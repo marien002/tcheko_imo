@@ -189,7 +189,7 @@
                       }else if($valeur["input"][$i]->statut_loyer==0){
                         $statut="Non payé";
                       }else{
-                         $statut="Une partie";
+                         $statut="Avance";
 
                       }
                           $observation = "";

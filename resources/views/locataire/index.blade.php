@@ -174,7 +174,10 @@ $(document).ready(function () {
                     routeResilier = routeResilier.replace('__ID_LOCATAIRE__', item.id_locataire)
                                                  .replace('__ID_BIEN__', item.id_bien)
                                                  .replace('__ID_TYPE_BIEN__',id_type );
+
+
                 routeResilier=`<a style="color:red" href="${routeResilier}"> fin contrat</a>`;
+                
                 
               }
 
